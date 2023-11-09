@@ -32,7 +32,7 @@ const App = () => {
       <br />
       <br />
 
-      <p>{count}</p>
+      <p>{state.count}</p>
 
 
       <section>
