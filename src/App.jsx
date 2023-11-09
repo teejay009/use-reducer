@@ -24,8 +24,9 @@ const App = () => {
 
 
       <section>
-        <button onClick={stopTimer}>Stop</button>
-        <button onClick={startTimer}>Start</button>
+        <button onClick={(() => setCount(prev => prev - 1))}>-</button>
+        <button onClick={(() => setCount(prev => prev + 1))}>+</button>
+        <button onClick={(() => setColor(prev => !prev))}>color</button>
       </section>
 
       <button onClick={resetTimer}>Reset</button>
