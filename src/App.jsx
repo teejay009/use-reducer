@@ -20,7 +20,7 @@ const App = () => {
       <br />
       <br />
 
-      <p>Renders: {renders.current}</p>
+      <p>Renders: {countupdate}</p>
 
 
       <section>
