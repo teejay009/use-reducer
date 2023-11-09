@@ -39,7 +39,7 @@ const App = () => {
       <br />
       <br />
 
-      <p>{randomInput}</p>
+      <p>{userInput}</p>
     </main>
   );
 };
