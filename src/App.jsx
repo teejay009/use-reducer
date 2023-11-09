@@ -5,7 +5,7 @@ const reducer = (state, action) => {
     case 'increament':
       return {count: state.count + 1}
     case 'decreament':
-      return {count: state.count + 1}
+      return {count: state.count - 1}
   }
 }
 
