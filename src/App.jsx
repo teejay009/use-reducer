@@ -43,7 +43,7 @@ const App = () => {
       <br />
       <br />
 
-      <p>{statecount}</p> 
+      <p>{state.count}</p> 
 
 
       <section>
