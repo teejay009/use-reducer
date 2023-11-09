@@ -2,22 +2,24 @@ import { useState, useReducer } from "react";
 
 const reducer = (state, action) => {
   switch(action.type){
-    case 'increament':
-      return {count: state.count + 1}
-    case 'decreament':
-      return {count: state.count - 1}
-
-      case 'decreament':
-        return {...state, count: state.count - 1}
-      case 'increament':
-        return {...state, count: state.count + 1}
-        case 'newUserInput':
-          return {...state,userInput: action.payLoad}
-          case 'tgColor':
-            return {color: !state.color}
-      default:
-        throw new Error()
+    case 'increment':
+      return {...state, count: state.count + 1}
+    case 'decrement':
+      return {...state, count: state.count - 1}
+    case 'newUserInput':
+        return {...state,userInput: action.payLoad}
+    case 'tgColor':
+        return {...state, color: !state.color}
+    default:
+      throw new Error()
   }
+}
+
+const ACTION = {
+  INCREMENT: 'increment',
+  DECREMENT: 'decrement',
+  NEW_INPUT: 'newUserInput',
+  TG_COLOR: 'tgColor'
 }
 
 const App = () => {
@@ -45,9 +47,9 @@ const App = () => {
 
 
       <section>
-        <button onClick={(() => dispatch({type: 'decrement'}))}>-</button>
-        <button onClick={(() => dispatch({type: 'increment'}))}>-</button>
-       <button onClick={(() => dispatch({type: 'tgColor'}))}>Color</button>
+        <button onClick={(() => dispatch({type: 'ACTION.DECREMENT'}))}>-</button>
+        <button onClick={(() => dispatch({type: 'ACTION.INCREMENT'}))}>+</button>
+       <button onClick={(() => dispatch({type: 'ACTION.TG_COLOR'}))}>Color</button>
       </section>
 
       
@@ -60,7 +62,7 @@ const App = () => {
       <br />
       <br />
 
-      <p>{userInput}</p>
+      <p>{state.userInput}</p>
     </main>
   );
 };
