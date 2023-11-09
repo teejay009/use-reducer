@@ -4,6 +4,8 @@ const reducer = (state, action) => {
   switch(action.type){
     case 'increament':
       return {count: state.count + 1}
+    case 'decreament':
+      return {count: state.count + 1}
   }
 }
 
