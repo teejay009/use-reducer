@@ -12,7 +12,7 @@ const reducer = (state, action) => {
       case 'increament':
         return {...state, count: state.count + 1}
         case 'newUserInput':
-          return {...state, userInput: action.payLoad}
+          return {...state,userInput: action.payLoad}
           case 'tgColor':
             return {color: !state.color}
       default:
@@ -21,21 +21,21 @@ const reducer = (state, action) => {
 }
 
 const App = () => {
-  const [state, dispatch] = useReducer(reducer, {count: 0})
-  const [userInput, setUserImput] = useState('')
-  // const [count, setCount] = useState(0)
-  const [color, setColor] = useState(false)
+  const [state, dispatch] = useReducer(reducer, {count: 0, userInput:'', color: false})
+  // const [userInput, setUserImput] = useState('')
+  // // const [count, setCount] = useState(0)
+  // const [color, setColor] = useState(false)
   
 
   
   return (
-    <main className="App" style={{color: color ? '#FFF' : "#FFF952"}}>
+    <main className="App" style={{color: state.color ? '#FFF' : "#FFF952"}}>
       <input
         
         
         type="text"
-        value={userInput}
-        onChange={(e) => setUserImput(e.target.value)}
+        value={state.userInput}
+        onChange={(e) => setUserImput(e.target.value)} 
       />
       
       <br />
