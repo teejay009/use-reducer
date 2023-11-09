@@ -6,6 +6,15 @@ const reducer = (state, action) => {
       return {count: state.count + 1}
     case 'decreament':
       return {count: state.count - 1}
+
+      case 'decreament':
+        return {...state, count: state.count - 1}
+      case 'increament':
+        return {count: state.count + 1}
+        case 'newUserInput':
+          return {userInput: action.payLoad}
+          case 'tgColor':
+            return {color: !state.color}
       default:
         throw new Error()
   }
