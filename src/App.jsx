@@ -13,8 +13,8 @@ const App = () => {
         
         onChange={handleInputChange}
         type="text"
-        value={randomInput}
-        placeholder="Type anything"
+        value={userInput}
+        placeholder={(e) => setUserImput(e.target.value)}
       />
       
       <br />
