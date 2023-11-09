@@ -36,7 +36,7 @@ const App = () => {
 
 
       <section>
-        <button onClick={(() => setCount(prev => prev - 1))}>-</button>
+        <button onClick={(() => dispatch({}))}>-</button>
         <button onClick={(() => setCount(prev => prev + 1))}>+</button>
         <button onClick={(() => setColor(prev => !prev))}>color</button>
       </section>
