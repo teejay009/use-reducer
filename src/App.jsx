@@ -1,14 +1,14 @@
 import { useState } from "react";
 
 const App = () => {
-  const [useInput, setUseImput] = useState('')
+  const [userInput, setUserImput] = useState('')
   const [count, setCount] = useState(0)
   const [color, setColor] = useState(false)
   
 
   
   return (
-    <main className="App" style={color ? '#fff92'}>
+    <main className="App" style={{color: color ? '#fff' : "#fff92"}}>
       <input
         
         onChange={handleInputChange}
@@ -16,10 +16,12 @@ const App = () => {
         value={randomInput}
         placeholder="Type anything"
       />
+      
+      <br />
+      <br />
+
       <p>Renders: {renders.current}</p>
 
-      <br />
-      <br />
 
       <section>
         <button onClick={stopTimer}>Stop</button>
