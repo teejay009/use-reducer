@@ -1,8 +1,13 @@
 import { useState, useReducer } from "react";
 
+const reducer = (state, action) => {
+  switch(action.type)
+}
+
 const App = () => {
+  const [state, dispatch] = useReducer(reducer, {count: 0})
   const [userInput, setUserImput] = useState('')
-  const [count, setCount] = useState(0)
+  // const [count, setCount] = useState(0)
   const [color, setColor] = useState(false)
   
 
