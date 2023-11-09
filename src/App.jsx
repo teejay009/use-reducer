@@ -29,12 +29,12 @@ const App = () => {
         <button onClick={(() => setColor(prev => !prev))}>color</button>
       </section>
 
-      <button onClick={resetTimer}>Reset</button>
+      
 
       <br />
       <br />
 
-      <p>Seconds: {Seconds}</p>
+      
 
       <br />
       <br />
