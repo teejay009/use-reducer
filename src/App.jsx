@@ -3,7 +3,7 @@ import { useState } from "react";
 const App = () => {
   const [useInput, setUseImput] = useState('')
   const [count, setCount] = useState(0)
-  const [color, setColor] = useState(false)
+  const [color, setColor] = useState(false),
   
 
   
