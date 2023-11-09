@@ -6,6 +6,8 @@ const reducer = (state, action) => {
       return {count: state.count + 1}
     case 'decreament':
       return {count: state.count - 1}
+      default:
+        throw new Error()
   }
 }
 
