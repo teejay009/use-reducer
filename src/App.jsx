@@ -35,7 +35,7 @@ const App = () => {
         
         type="text"
         value={state.userInput}
-        onChange={(e) => setUserImput(e.target.value)} 
+        onChange={(e) => } 
       />
       
       <br />
