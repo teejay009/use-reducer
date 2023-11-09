@@ -10,7 +10,7 @@ const reducer = (state, action) => {
       case 'decreament':
         return {...state, count: state.count - 1}
       case 'increament':
-        return {count: state.count + 1}
+        return {...state, count: state.count + 1}
         case 'newUserInput':
           return {userInput: action.payLoad}
           case 'tgColor':
