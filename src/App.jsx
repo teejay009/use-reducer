@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useReducer } from "react";
 
 const App = () => {
   const [userInput, setUserImput] = useState('')
@@ -8,19 +8,19 @@ const App = () => {
 
   
   return (
-    <main className="App" style={{color: color ? '#fff' : "#fff92"}}>
+    <main className="App" style={{color: color ? '#FFF' : "#FFF952"}}>
       <input
         
-        onChange={handleInputChange}
+        
         type="text"
         value={userInput}
-        placeholder={(e) => setUserImput(e.target.value)}
+        onChange={(e) => setUserImput(e.target.value)}
       />
       
       <br />
       <br />
 
-      <p>{countupdate}</p>
+      <p>{count}</p>
 
 
       <section>
